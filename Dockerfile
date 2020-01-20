@@ -30,7 +30,9 @@ ENV \
 	SCL_ENABLED=rh-php${PHP_VER} \
 	\
 	PHP_PATH=/opt/rh/rh-php${PHP_VER}/root/usr/bin \
-	APACHE_PATH=/opt/rh/httpd24/root/usr/bin:/opt/rh/httpd24/root/usr/sbin \
+	APACHE_PATH=/opt/rh/httpd24/root/usr/bin:/opt/rh/httpd24/root/usr/sbin
+
+ENV \
 	PATH="${PHP_PATH}:${APACHE_PATH}:${PATH}"
 
 # Install Apache httpd and PHP

@@ -1,0 +1,11 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t drydock-php .
+    - docker run drydock-php php -v
